@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "042E11A71A1FAD1900CE03F9"
-               BuildableName = "libswiftzmq.dylib"
-               BlueprintName = "swiftzmq"
+               BlueprintIdentifier = "04AC0A271A1FAE5900402D60"
+               BuildableName = "swiftzmq_test"
+               BlueprintName = "swiftzmq_test"
                ReferencedContainer = "container:swiftzmq.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,6 +29,15 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "04AC0A271A1FAE5900402D60"
+            BuildableName = "swiftzmq_test"
+            BlueprintName = "swiftzmq_test"
+            ReferencedContainer = "container:swiftzmq.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -39,15 +48,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "042E11A71A1FAD1900CE03F9"
-            BuildableName = "libswiftzmq.dylib"
-            BlueprintName = "swiftzmq"
+            BlueprintIdentifier = "04AC0A271A1FAE5900402D60"
+            BuildableName = "swiftzmq_test"
+            BlueprintName = "swiftzmq_test"
             ReferencedContainer = "container:swiftzmq.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -57,15 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "042E11A71A1FAD1900CE03F9"
-            BuildableName = "libswiftzmq.dylib"
-            BlueprintName = "swiftzmq"
+            BlueprintIdentifier = "04AC0A271A1FAE5900402D60"
+            BuildableName = "swiftzmq_test"
+            BlueprintName = "swiftzmq_test"
             ReferencedContainer = "container:swiftzmq.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
