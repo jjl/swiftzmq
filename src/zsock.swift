@@ -1,3 +1,8 @@
+import Foundation
+
+typealias szsock_ptr = UnsafeMutablePointer<szsock_t>
+typealias szsock_ptr_ptr = UnsafeMutablePointer<szsock_ptr>
+
 public enum ZSockType {
     case Pair(String)
     case Pub(String)
@@ -42,21 +47,19 @@ private enum ZmqSocketType : Int {
         }
     }
 }
-typealias zsock_ptr = UnsafePointer<zsock_t>
-typealias zsock_ptr_ptr = UnsafePointer<zsock_t>
 
 private class ZmqSocketInternal {
-    func zsock_new(type: ZmqSocketType, file: String, line: Int)
-        -> UnsafePointer<zsock_t> {
-        return zsock_new_(type.rawData, file, line)
+    func zsock_new(type: ZmqSocketType, file: String, line: Int) -> szsock_ptr {
+        return szsock_new(Int32(type.rawValue), file, UInt(line))
     }
-    func zsock_destroy(socket: zsock_ptr_ptr) {
+    func zsock_destroy(socket: szsock_ptr_ptr) {
     
     }
 }
 
 public class ZmqSocket {
-    private class func create(type: ZmqSocketType, file: String = __FILE__, line: Int = __LINE__) -> ZmqSocket {
+    private class func create(type: ZmqSocketType, file: String = __FILE__, line: Int = __LINE__) -> ZmqBaseSocket {
+        return ZmqBaseSocket()
 //        ZmqSocketFactory.create(type, file, line)
     }
 }

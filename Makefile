@@ -9,27 +9,35 @@ RELEASE_SWIFTFLAGS=$(SHARED_SWIFTFLAGS) -o $(RELEASE_OBJ_NAME)
 TEST_SWIFTFLAGS=$(SHARED_SWIFTFLAGS)
 ### Shouldn't need to edit below here ###
 INCLUDE_DIR=include
-SRC_DIR=src
-TEST_DIR=t
-SOURCES=$(wildcard $(SRC_DIR)/*.swift)
-TEST_SOURCES=$(wildcard $(TEST_DIR)/*.swift)
+C_SRC_DIR=c-src
+SWIFT_SRC_DIR=src
+SWIFT_TEST_DIR=t
+SWIFT_SOURCES=$(wildcard $(SWIFT_SRC_DIR)/*.swift)
+SWIFT_TEST_SOURCES=$(wildcard $(SWIFT_TEST_DIR)/*.swift)
+C_SOURCES=$(wildcard $(C_SRC_DIR)/*.c)
 # This env var is needed to interface with czmq
 SWIFT_OBJC_BRIDGING_HEADER=$(INCLUDE_DIR)/bridge.h
 # swift is invoked this way. SWIFTI = interactive, SWIFTC = compiler
-SWIFTI=xcrun swift
-SWIFTC=xcrun swiftc
-
+XCODEBUILD=xcodebuild
 ### RULES ###
 
-# Debug build
-debug: $(SOURCES)
-	$(SWIFTC) $(DEBUG_SWIFTFLAGS) $^
-# Release build
-release: $(SOURCES)
-	$(SWIFTC) $(RELEASE_SWIFTFLAGS) $^
-# Run the tests
-test: $(SOURCES) $(TEST_SOURCES)
-	$(SWIFTI) $(TEST_SWIFTFLAGS) $^
-# Clean up
+#Release
+szmq:
+	$(XCODEBUILD) -target szmq -configuration Release
+swiftzmq:
+	$(XCODEBUILD) -target swiftzmq -configuration Release
+#Debug
+szmq_debug:
+	$(XCODEBUILD) -target szmq -configuration Debug
+swiftzmq_debug:
+	$(XCODEBUILD) -target swiftzmq -configuration Debug
+swiftzmqtest:
+	$(XCODEBUILD) -target swiftzmqtest -configuration Debug
+# Aliases for build types
+debug: swiftzmq_debug
+release: swiftzmq
+test: swiftzmqtest
+	build/Debug/swiftzmqtest
+# Housekeeping
 clean:
 	rm -f swiftzmq-*.dylib

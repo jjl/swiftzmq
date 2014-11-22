@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4E63245C-A842-4597-9947-C5ED7A78801B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>swiftzmq</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE9FFBA5B13B45C00B10D8C2FD74A145BAEE60CC</key>
+		<string>github.com:jjl/swiftzmq.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>swiftzmq.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE9FFBA5B13B45C00B10D8C2FD74A145BAEE60CC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jjl/swiftzmq.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE9FFBA5B13B45C00B10D8C2FD74A145BAEE60CC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE9FFBA5B13B45C00B10D8C2FD74A145BAEE60CC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>swiftzmq</string>
+		</dict>
+	</array>
+</dict>
+</plist>

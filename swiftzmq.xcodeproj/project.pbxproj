@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		04AC0A431A1FBAD700402D60 /* zsock_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0A421A1FBAD700402D60 /* zsock_test.swift */; };
 		04AC0A441A1FBB4600402D60 /* zsock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0A3E1A1FB48F00402D60 /* zsock.swift */; };
-		04AC0AA41A1FBC6D00402D60 /* libczmq.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC0AA31A1FBC6D00402D60 /* libczmq.1.dylib */; };
-		04AC0AA51A1FBC8300402D60 /* libswiftzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E11A81A1FAD1900CE03F9 /* libswiftzmq.dylib */; };
+		04AC0AA51A1FBC8300402D60 /* libswiftzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E11A81A1FAD1900CE03F9 /* libswiftzmq.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		04AC4CBD1A20821E00402D60 /* bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AC4CBB1A20821E00402D60 /* bridge.h */; };
+		04AC4CBE1A20821E00402D60 /* szsock.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AC4CBC1A20821E00402D60 /* szsock.h */; };
+		04AC4CCA1A2098DF00402D60 /* szsock.c in Sources */ = {isa = PBXBuildFile; fileRef = 04AC4CB81A2081F900402D60 /* szsock.c */; };
+		04AC4CCC1A20992400402D60 /* libszmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC4CC61A2098C600402D60 /* libszmq.dylib */; };
+		04AC4CD11A209A0800402D60 /* libszmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC4CC61A2098C600402D60 /* libszmq.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		04AC4D4E1A20E26C00402D60 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC4D4C1A20E20300402D60 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -22,7 +27,32 @@
 			outputFiles = (
 			);
 		};
+		04AC4CBF1A20823F00402D60 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.llvm.clang.1_0;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
 /* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		04AC4D021A20AD7300402D60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 042E11A01A1FAD1900CE03F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04AC4CC51A2098C600402D60;
+			remoteInfo = szmq;
+		};
+		04AC4D041A20AD7E00402D60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 042E11A01A1FAD1900CE03F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 042E11A71A1FAD1900CE03F9;
+			remoteInfo = swiftzmq;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		04AC0A261A1FAE5900402D60 /* CopyFiles */ = {
@@ -38,10 +68,14 @@
 
 /* Begin PBXFileReference section */
 		042E11A81A1FAD1900CE03F9 /* libswiftzmq.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libswiftzmq.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		04AC0A281A1FAE5900402D60 /* swiftzmq_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swiftzmq_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AC0A281A1FAE5900402D60 /* swiftzmqtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swiftzmqtest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AC0A3E1A1FB48F00402D60 /* zsock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = zsock.swift; path = src/zsock.swift; sourceTree = "<group>"; };
 		04AC0A421A1FBAD700402D60 /* zsock_test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = zsock_test.swift; path = t/zsock_test.swift; sourceTree = "<group>"; };
-		04AC0AA31A1FBC6D00402D60 /* libczmq.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libczmq.1.dylib; path = ../../../../usr/local/Cellar/czmq/2.2.0_1/lib/libczmq.1.dylib; sourceTree = "<group>"; };
+		04AC4CB81A2081F900402D60 /* szsock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = szsock.c; path = "c-src/szsock.c"; sourceTree = "<group>"; };
+		04AC4CBB1A20821E00402D60 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = include/bridge.h; sourceTree = "<group>"; };
+		04AC4CBC1A20821E00402D60 /* szsock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = szsock.h; path = include/szsock.h; sourceTree = "<group>"; };
+		04AC4CC61A2098C600402D60 /* libszmq.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libszmq.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AC4D4C1A20E20300402D60 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = t/main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AC0AA41A1FBC6D00402D60 /* libczmq.1.dylib in Frameworks */,
+				04AC4CCC1A20992400402D60 /* libszmq.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +91,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AC4CD11A209A0800402D60 /* libszmq.dylib in Frameworks */,
 				04AC0AA51A1FBC8300402D60 /* libswiftzmq.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AC4CC31A2098C600402D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +109,8 @@
 		042E119F1A1FAD1900CE03F9 = {
 			isa = PBXGroup;
 			children = (
-				04AC0AA31A1FBC6D00402D60 /* libczmq.1.dylib */,
+				04AC4CBA1A20820D00402D60 /* includes */,
+				04AC4CB71A2081EB00402D60 /* c code */,
 				04AC0A411A1FBA7200402D60 /* tests */,
 				04AC0A3D1A1FB46F00402D60 /* swiftzmq */,
 				042E11A91A1FAD1900CE03F9 /* Products */,
@@ -78,7 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				042E11A81A1FAD1900CE03F9 /* libswiftzmq.dylib */,
-				04AC0A281A1FAE5900402D60 /* swiftzmq_test */,
+				04AC0A281A1FAE5900402D60 /* swiftzmqtest */,
+				04AC4CC61A2098C600402D60 /* libszmq.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,14 +139,41 @@
 			isa = PBXGroup;
 			children = (
 				04AC0A421A1FBAD700402D60 /* zsock_test.swift */,
+				04AC4D4C1A20E20300402D60 /* main.swift */,
 			);
 			name = tests;
+			sourceTree = "<group>";
+		};
+		04AC4CB71A2081EB00402D60 /* c code */ = {
+			isa = PBXGroup;
+			children = (
+				04AC4CB81A2081F900402D60 /* szsock.c */,
+			);
+			name = "c code";
+			sourceTree = "<group>";
+		};
+		04AC4CBA1A20820D00402D60 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				04AC4CBB1A20821E00402D60 /* bridge.h */,
+				04AC4CBC1A20821E00402D60 /* szsock.h */,
+			);
+			name = includes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		042E11A61A1FAD1900CE03F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AC4CBD1A20821E00402D60 /* bridge.h in Headers */,
+				04AC4CBE1A20821E00402D60 /* szsock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AC4CC41A2098C600402D60 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -121,18 +192,20 @@
 				042E11A61A1FAD1900CE03F9 /* Headers */,
 			);
 			buildRules = (
+				04AC4CBF1A20823F00402D60 /* PBXBuildRule */,
 				04AC0A361A1FB18D00402D60 /* PBXBuildRule */,
 			);
 			dependencies = (
+				04AC4D031A20AD7300402D60 /* PBXTargetDependency */,
 			);
 			name = swiftzmq;
 			productName = swiftzmq;
 			productReference = 042E11A81A1FAD1900CE03F9 /* libswiftzmq.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		04AC0A271A1FAE5900402D60 /* swiftzmq_test */ = {
+		04AC0A271A1FAE5900402D60 /* swiftzmqtest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04AC0A2E1A1FAE5900402D60 /* Build configuration list for PBXNativeTarget "swiftzmq_test" */;
+			buildConfigurationList = 04AC0A2E1A1FAE5900402D60 /* Build configuration list for PBXNativeTarget "swiftzmqtest" */;
 			buildPhases = (
 				04AC0A241A1FAE5900402D60 /* Sources */,
 				04AC0A251A1FAE5900402D60 /* Frameworks */,
@@ -141,11 +214,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				04AC4D051A20AD7E00402D60 /* PBXTargetDependency */,
 			);
-			name = swiftzmq_test;
+			name = swiftzmqtest;
 			productName = swiftzmq_test;
-			productReference = 04AC0A281A1FAE5900402D60 /* swiftzmq_test */;
+			productReference = 04AC0A281A1FAE5900402D60 /* swiftzmqtest */;
 			productType = "com.apple.product-type.tool";
+		};
+		04AC4CC51A2098C600402D60 /* szmq */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AC4CC91A2098C700402D60 /* Build configuration list for PBXNativeTarget "szmq" */;
+			buildPhases = (
+				04AC4CC21A2098C600402D60 /* Sources */,
+				04AC4CC31A2098C600402D60 /* Frameworks */,
+				04AC4CC41A2098C600402D60 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = szmq;
+			productName = szmq;
+			productReference = 04AC4CC61A2098C600402D60 /* libszmq.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -160,6 +251,9 @@
 						CreatedOnToolsVersion = 6.1;
 					};
 					04AC0A271A1FAE5900402D60 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					04AC4CC51A2098C600402D60 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -177,7 +271,8 @@
 			projectRoot = "";
 			targets = (
 				042E11A71A1FAD1900CE03F9 /* swiftzmq */,
-				04AC0A271A1FAE5900402D60 /* swiftzmq_test */,
+				04AC0A271A1FAE5900402D60 /* swiftzmqtest */,
+				04AC4CC51A2098C600402D60 /* szmq */,
 			);
 		};
 /* End PBXProject section */
@@ -195,11 +290,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AC4D4E1A20E26C00402D60 /* main.swift in Sources */,
 				04AC0A431A1FBAD700402D60 /* zsock_test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04AC4CC21A2098C600402D60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AC4CCA1A2098DF00402D60 /* szsock.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04AC4D031A20AD7300402D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04AC4CC51A2098C600402D60 /* szmq */;
+			targetProxy = 04AC4D021A20AD7300402D60 /* PBXContainerItemProxy */;
+		};
+		04AC4D051A20AD7E00402D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 042E11A71A1FAD1900CE03F9 /* swiftzmq */;
+			targetProxy = 04AC4D041A20AD7E00402D60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		042E11AA1A1FAD1900CE03F9 /* Debug */ = {
@@ -236,12 +353,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/zeromq/4.0.5_2/lib/,
-					"
-",
-					/usr/local/Cellar/zeromq/4.0.5_2/lib/,
-					"\n/usr/local/Cellar/zeromq/4.0.5_2/lib/",
-					/usr/local/Cellar/czmq/2.2.0_1/lib/,
+					/usr/local/Cellar/zeromq/HEAD/lib/,
+					/usr/local/Cellar/czmq/HEAD/lib/,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -280,12 +393,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/zeromq/4.0.5_2/lib/,
-					"
-",
-					/usr/local/Cellar/zeromq/4.0.5_2/lib/,
-					"\n/usr/local/Cellar/zeromq/4.0.5_2/lib/",
-					/usr/local/Cellar/czmq/2.2.0_1/lib/,
+					/usr/local/Cellar/zeromq/HEAD/lib/,
+					/usr/local/Cellar/czmq/HEAD/lib/,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -301,12 +410,15 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				EXECUTABLE_PREFIX = lib;
+				INSTALL_PATH = /Users/jjl/code/swiftzmq/build/Debug/;
 				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/czmq/HEAD/lib,
+					/usr/local/Cellar/zeromq/HEAD/lib,
 					"$(inherited)",
-					/usr/local/Cellar/czmq/2.2.0_1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = include/bridge.h;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -318,11 +430,13 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				EXECUTABLE_PREFIX = lib;
 				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/czmq/HEAD/lib,
+					/usr/local/Cellar/zeromq/HEAD/lib,
 					"$(inherited)",
-					/usr/local/Cellar/czmq/2.2.0_1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = include/bridge.h;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -333,18 +447,81 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/czmq/HEAD/lib,
+					/usr/local/Cellar/zeromq/HEAD/lib,
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				SWIFT_INCLUDE_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/Cellar/czmq/HEAD/include /usr/local/Cellar/zeromq/HEAD/include/";
 			};
 			name = Debug;
 		};
 		04AC0A2D1A1FAE5900402D60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/czmq/HEAD/lib,
+					/usr/local/Cellar/zeromq/HEAD/lib,
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				SWIFT_INCLUDE_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/Cellar/czmq/HEAD/include /usr/local/Cellar/zeromq/HEAD/include/";
+			};
+			name = Release;
+		};
+		04AC4CC71A2098C700402D60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INSTALL_PATH = /Users/jjl/code/swiftzmq/build/Debug;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/zeromq/HEAD/lib,
+					/usr/local/Cellar/czmq/HEAD/lib,
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-lczmq",
+					"-lzmq",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/Cellar/czmq/HEAD/include /usr/local/Cellar/zeromq/HEAD/include";
+			};
+			name = Debug;
+		};
+		04AC4CC81A2098C700402D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/zeromq/HEAD/lib,
+					/usr/local/Cellar/czmq/HEAD/lib,
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-lczmq",
+					"-lzmq",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/Cellar/czmq/HEAD/include /usr/local/Cellar/zeromq/HEAD/include";
 			};
 			name = Release;
 		};
@@ -369,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04AC0A2E1A1FAE5900402D60 /* Build configuration list for PBXNativeTarget "swiftzmq_test" */ = {
+		04AC0A2E1A1FAE5900402D60 /* Build configuration list for PBXNativeTarget "swiftzmqtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04AC0A2C1A1FAE5900402D60 /* Debug */,
@@ -377,6 +554,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		04AC4CC91A2098C700402D60 /* Build configuration list for PBXNativeTarget "szmq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AC4CC71A2098C700402D60 /* Debug */,
+				04AC4CC81A2098C700402D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
